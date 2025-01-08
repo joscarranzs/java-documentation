@@ -1,33 +1,33 @@
-# Documentación básica de Java
+# Basic Java Documentation
 
-## Descripción del repositorio
+## Repository Description
 
-Este repositorio contiene documentación básica sobre el lenguaje de programación Java. Está diseñado para ayudar a los principiantes a entender los conceptos fundamentales de Java, incluyendo la estructura de un programa, clases, atributos y métodos.
+This repository contains basic documentation about the Java programming language. It is designed to help beginners understand fundamental Java concepts, including the structure of a program, classes, attributes, and methods.
 
-## Indicaciones
+## Instructions
 
-### Descargar las herramientas necesarias
+### Download Necessary Tools
 
-Para poder trabajar con Java, necesitas instalar las siguientes herramientas en tu computadora:
+To work with Java, you need to install the following tools on your computer:
 
-1. **Java Development Kit (JDK)**: El JDK es un entorno de desarrollo necesario para compilar y ejecutar aplicaciones Java. Puedes descargar la última versión del JDK desde el sitio oficial de Oracle: [Descargar JDK](https://www.oracle.com/java/technologies/javase-downloads.html).
+1. **Java Development Kit (JDK)**: The JDK is a development environment necessary to compile and run Java applications. You can download the latest version of the JDK from Oracle's official website: [Download JDK](https://www.oracle.com/java/technologies/javase-downloads.html).
 
-2. **Apache Maven (Opcional)**: Si planeas manejar dependencias y realizar builds automáticos, puedes instalar Apache Maven. Descárgalo desde el sitio oficial: [Descargar Maven](https://maven.apache.org/download.cgi).
+2. **Apache Maven (Optional)**: If you plan to manage dependencies and perform automatic builds, you can install Apache Maven. Download it from the official site: [Download Maven](https://maven.apache.org/download.cgi).
 
-### Usar un IDE de preferencia
+### Use a Preferred IDE
 
-Para editar y ejecutar tu código Java, es recomendable usar un Entorno de Desarrollo Integrado (IDE). Aquí hay algunas opciones populares:
+To edit and run your Java code, it is recommended to use an Integrated Development Environment (IDE). Here are some popular options:
 
-1. **IntelliJ IDEA**: Un IDE poderoso y muy popular para el desarrollo en Java. Puedes descargar la versión Community gratuita: [Descargar IntelliJ IDEA](https://www.jetbrains.com/idea/download/).
+1. **IntelliJ IDEA**: A powerful and very popular IDE for Java development. You can download the free Community version: [Download IntelliJ IDEA](https://www.jetbrains.com/idea/download/).
 
-2. **Eclipse**: Otro IDE ampliamente utilizado para Java, con muchas características y plugins. Descárgalo desde aquí: [Descargar Eclipse](https://www.eclipse.org/downloads/).
+2. **Eclipse**: Another widely used IDE for Java, with many features and plugins. Download it from here: [Download Eclipse](https://www.eclipse.org/downloads/).
 
-3. **NetBeans**: Un IDE de código abierto con soporte para varios lenguajes de programación, incluyendo Java. Descárgalo desde aquí: [Descargar NetBeans](https://netbeans.apache.org/download/index.html).
+3. **NetBeans**: An open-source IDE that supports several programming languages, including Java. Download it from here: [Download NetBeans](https://netbeans.apache.org/download/index.html).
 
-### Configuración del entorno de desarrollo
+### Set Up the Development Environment
 
-1. **Instalar el JDK**: Sigue las instrucciones del instalador para instalar el JDK en tu sistema. Asegúrate de configurar la variable de entorno `JAVA_HOME` y agregar el directorio `bin` del JDK a tu variable de entorno `PATH`.
+1. **Install the JDK**: Follow the installer instructions to install the JDK on your system. Make sure to configure the `JAVA_HOME` environment variable and add the JDK's `bin` directory to your `PATH` environment variable.
 
-2. **Configurar el IDE**: Una vez que hayas instalado el JDK, abre tu IDE de preferencia y configúralo para usar el JDK instalado. La mayoría de los IDEs tienen asistentes de configuración que te guiarán a través del proceso.
+2. **Configure the IDE**: Once you have installed the JDK, open your preferred IDE and configure it to use the installed JDK. Most IDEs have setup wizards that will guide you through the process.
 
-3. **Crear un nuevo proyecto**: Usa tu IDE para crear un nuevo proyecto Java. Esto configurará automáticamente la estructura de carpetas y archivos necesarios para empezar a escribir y ejecutar código Java.
+3. **Create a New Project**: Use your IDE to create a new Java project. This will automatically set up the necessary folder and file structure to start writing and running Java code.
