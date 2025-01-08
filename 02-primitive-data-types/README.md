@@ -1,4 +1,4 @@
-# Data types in java
+# Data types in Java
 
 ## Numeric data types
 Java has several numeric data types to handle different ranges of values. Here are the types with definitions and examples:
