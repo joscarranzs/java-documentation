@@ -1,4 +1,4 @@
-# Basic Java Documentation
+# Basic Java documentation
 
 ## Repository description
 
