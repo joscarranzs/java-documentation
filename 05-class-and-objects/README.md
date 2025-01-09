@@ -1,4 +1,4 @@
-# Classes and objects in java
+# Classes and objects in Java
 
 ## Concept of a class
 A class is a blueprint or template for creating objects. It defines properties (attributes) and behaviors (methods) that the objects will have.
