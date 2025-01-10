@@ -69,7 +69,6 @@ A combination of two or more types of inheritance. (Not directly supported in Ja
 The superclass is the parent class from which other classes (subclasses) inherit. It provides the common properties and methods that can be reused by subclasses.
 
 ### Example
-Real-life example:
 ```java
 class Animal {
     String name;
@@ -94,7 +93,6 @@ class Dog extends Animal {
 A subclass is a child class that inherits properties and methods from a superclass. It can also have additional properties and methods of its own.
 
 ### Example
-Real-life example:
 ```java
 class Animal {
     String name;
