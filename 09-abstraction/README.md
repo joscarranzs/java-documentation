@@ -1,149 +1,75 @@
 # Abstraction in Java
 
-## Concept of abstraction
-Abstraction is the process of hiding unnecessary details from the user and showing only the important parts of an object or system. It helps simplify complex systems by breaking them into smaller, understandable parts.
-
-For example, when you drive a car, you only use the steering wheel, pedals, and buttons. You don’t need to know how the engine works internally.
+## Abstraction
+Abstraction is the process of hiding the implementation details of a feature and only showing the essential information to the user. It focuses on what an object does rather than how it does it.
+Abstraction is like driving a car. You use the steering wheel, pedals, and gear shift without knowing the complex mechanisms behind the engine or braking system.
 
 ---
 
 ## Abstract class
+An abstract class is a class that cannot be instantiated on its own. It serves as a blueprint for other classes and can include both abstract methods (without implementation) and concrete methods (with implementation).
+An abstract class is like a rough draft of a design. It provides the structure but leaves some details to be filled in by subclasses.
 
-### Concept
-An abstract class in Java is a class that cannot be directly instantiated. It serves as a blueprint for other classes. Abstract classes can have both abstract methods (methods without a body) and regular methods (methods with a body). They are used to define common properties and behavior for related classes.
-
-### Example
 ```java
-abstract class Vehicle {
-    int wheels;
+abstract class Animal {
+    abstract void sound(); // Abstract method
 
-    Vehicle(int wheels) {
-        this.wheels = wheels;
-    }
-
-    // Abstract method
-    abstract void start();
-
-    // Regular method
-    void showWheels() {
-        System.out.println("This vehicle has " + wheels + " wheels.");
+    void eat() { // Concrete method
+        System.out.println("This animal eats food.");
     }
 }
 
-class Car extends Vehicle {
-    Car() {
-        super(4);
-    }
-
+class Dog extends Animal {
     @Override
-    void start() {
-        System.out.println("Car starts with a key.");
-    }
-}
-
-class Bicycle extends Vehicle {
-    Bicycle() {
-        super(2);
-    }
-
-    @Override
-    void start() {
-        System.out.println("Bicycle starts by pedaling.");
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Vehicle car = new Car();
-        Vehicle bicycle = new Bicycle();
-
-        car.showWheels();
-        car.start();
-
-        bicycle.showWheels();
-        bicycle.start();
-    }
-}
-```
-**Output:**
-```
-This vehicle has 4 wheels.
-Car starts with a key.
-This vehicle has 2 wheels.
-Bicycle starts by pedaling.
-```
-
----
-
-## Interface
-
-### Concept
-An interface in Java is a blueprint of a class. It is used to achieve 100% abstraction. Interfaces can only have method declarations (no body) and constants (final variables). Classes that implement an interface must define all its methods.
-
-### Example
-```java
-interface Animal {
-    void eat(); // Abstract method
-    void sleep(); // Abstract method
-}
-
-class Dog implements Animal {
-    @Override
-    public void eat() {
-        System.out.println("Dog eats bones.");
-    }
-
-    @Override
-    public void sleep() {
-        System.out.println("Dog sleeps in a kennel.");
-    }
-}
-
-class Bird implements Animal {
-    @Override
-    public void eat() {
-        System.out.println("Bird eats seeds.");
-    }
-
-    @Override
-    public void sleep() {
-        System.out.println("Bird sleeps in a nest.");
+    void sound() {
+        System.out.println("The dog barks.");
     }
 }
 
 public class Main {
     public static void main(String[] args) {
         Animal dog = new Dog();
-        Animal bird = new Bird();
-
-        dog.eat();
-        dog.sleep();
-
-        bird.eat();
-        bird.sleep();
+        dog.sound(); // Output: The dog barks.
+        dog.eat();   // Output: This animal eats food.
     }
 }
 ```
-**Output:**
-```
-Dog eats bones.
-Dog sleeps in a kennel.
-Bird eats seeds.
-Bird sleeps in a nest.
+
+---
+
+## Interface
+An interface in Java is a reference type that contains abstract methods (implicitly public and abstract) and constants (implicitly public, static, and final). It defines a contract that classes can implement.
+An interface is like a job description. It outlines what a person (or class) must do but doesn’t specify how they should do it.
+
+```java
+interface Animal {
+    void sound(); // Abstract method
+}
+
+class Cat implements Animal {
+    @Override
+    public void sound() {
+        System.out.println("The cat meows.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal cat = new Cat();
+        cat.sound(); // Output: The cat meows.
+    }
+}
 ```
 
 ---
 
 ## Abstract method
+An abstract method is a method that is declared without an implementation. It must be defined in a subclass or implemented by a class implementing an interface.
+An abstract method is like a placeholder or a blank form. It specifies that something must be done but leaves the details for someone else to complete.
 
-### Concept
-An abstract method is a method declared in an abstract class or interface without a body. Subclasses or implementing classes must provide a definition for the method.
-
-### Example
 ```java
 abstract class Shape {
-    // Abstract method
-    abstract void draw();
+    abstract void draw(); // Abstract method
 }
 
 class Circle extends Shape {
@@ -153,41 +79,10 @@ class Circle extends Shape {
     }
 }
 
-class Rectangle extends Shape {
-    @Override
-    void draw() {
-        System.out.println("Drawing a rectangle.");
-    }
-}
-
 public class Main {
     public static void main(String[] args) {
         Shape circle = new Circle();
-        Shape rectangle = new Rectangle();
-
-        circle.draw();
-        rectangle.draw();
+        circle.draw(); // Output: Drawing a circle.
     }
 }
 ```
-**Output:**
-```
-Drawing a circle.
-Drawing a rectangle.
-```
-
----
-
-## Difference between abstract class and interface
-
-| Feature               | Abstract class                          | Interface                            |
-|-----------------------|-----------------------------------------|--------------------------------------|
-| **Methods**           | Can have abstract and concrete methods | Only abstract methods (Java 7 and earlier) or default methods (Java 8+) |
-| **Variables**         | Can have instance variables            | Only static and final variables      |
-| **Inheritance**       | Supports single inheritance            | Supports multiple inheritance        |
-| **Usage**             | Used when classes share behavior       | Used for unrelated classes to share capabilities |
-| **Example**           | `abstract class Vehicle`               | `interface Animal`                   |
-
-### Real-Life Analogy
-- **Abstract Class:** Think of a general blueprint for vehicles (cars, bikes, etc.) that share common traits like wheels.
-- **Interface:** Imagine a set of rules that all animals (dogs, birds, etc.) must follow, like eating and sleeping.
