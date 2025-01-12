@@ -1,70 +1,75 @@
 # Data types in Java
 
 ## Numeric data types
-Java has several numeric data types to handle different ranges of values. Here are the types with definitions and examples:
 
 ### short
-A 16-bit integer type. It can store values from −32,768 to 32,767.
-Example:
+A `short` is a 16-bit signed integer. It is used to save memory in large arrays where the memory savings are significant.
+
 ```java
-short number = 150;
+short number = 10000;
+System.out.println("Short number: " + number);
 ```
 
 ### byte
-An 8-bit integer type. It can store values from −128 to 127.
-Example:
+A `byte` is an 8-bit signed integer. It is used to save space in arrays and can also be used in place of `int` where its range is sufficient.
+
 ```java
-byte smallNumber = 20;
+byte smallNumber = 127;
+System.out.println("Byte number: " + smallNumber);
 ```
 
 ### int
-A 32-bit integer type. It can store values from −2,147,483,648 to 2,147,483,647.
-Example:
+An `int` is a 32-bit signed integer. It is the most commonly used integer type.
+
 ```java
-int count = 1000;
+int count = 50000;
+System.out.println("Integer count: " + count);
 ```
 
 ### long
-A 64-bit integer type. It can store values from −92,233,720,368,547,758,08 to 92,233,720,368,547,758,07.
-Example:
+A `long` is a 64-bit signed integer. It is used when a wider range than `int` is needed.
+
 ```java
-long largeNumber = 100000L;
+long largeNumber = 1000000000L;
+System.out.println("Long number: " + largeNumber);
 ```
 
 ### float
-A 32-bit floating-point type. It is used for fractional numbers, with up to 7 decimal digits of precision.
-Example:
+A `float` is a 32-bit floating point for representing fractional numbers. It is less precise than `double` and is generally used to save memory in large arrays of floating-point numbers.
+
 ```java
 float price = 19.99f;
+System.out.println("Float price: " + price);
 ```
 
 ### double
-A 64-bit floating-point type. It is used for fractional numbers, with up to 15 decimal digits of precision.
-Example:
+A `double` is a 64-bit floating point for representing decimal numbers with more precision than `float`.
+
 ```java
-double distance = 12345.6789;
+double pi = 3.14159;
+System.out.println("Double value: " + pi);
 ```
 
 ---
 
-## Character data types
-Character data types are used to store single characters. In Java, the primary type is:
+## Character data type
 
 ### char
-A 16-bit type that stores a single character or Unicode value.
-Example:
+A `char` is a 16-bit data type used to store a single character. It can store any character using Unicode encoding.
+
 ```java
 char letter = 'A';
+System.out.println("Character: " + letter);
 ```
 
 ---
 
-## Boolean data types
-Boolean data types represent true or false values.
+## Boolean data type
 
 ### boolean
-A type that holds one of two possible values: `true` or `false`.
-Example:
+A `boolean` can only have two possible values: `true` or `false`. It is typically used for conditional checks and logical operations.
+
 ```java
 boolean isJavaFun = true;
+System.out.println("Is Java fun? " + isJavaFun);
 ```
