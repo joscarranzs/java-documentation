@@ -2,7 +2,6 @@
 
 ## Comments
 
-### Concept
 Comments are used to explain the code or make notes for programmers. They are ignored by the computer when running the program.
 
 ### Single-line comments
