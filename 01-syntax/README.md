@@ -8,7 +8,6 @@ Comments are used to explain the code or make notes for programmers. They are ig
 ### Single-line comments
 Single-line comments begin with `//`. Anything written after `//` on the same line is a comment.
 
-Example:
 ```java
 // This is a single-line comment
 System.out.println("Hello World");
@@ -17,7 +16,6 @@ System.out.println("Hello World");
 ### Multi-line comments
 Multi-line comments begin with `/*` and end with `*/`. They can span multiple lines.
 
-Example:
 ```java
 /*
 This is a multi-line comment.
@@ -29,7 +27,6 @@ System.out.println("Hello World");
 ### Documentation comments (Javadoc)
 Documentation comments are written using `/**` and `*/`. They are used to create documentation for classes, methods, or fields and can be processed by the Javadoc tool.
 
-Example:
 ```java
 /**
  * This class demonstrates how to use comments.
@@ -48,11 +45,8 @@ public class Example {
 
 ## Classes
 
-### Concept
-A class is a blueprint to create objects. It defines properties (attributes) and actions (methods) that the object can have.
-
-### Analogy
-A class is like a recipe for a cake. The recipe tells you what ingredients (properties) you need and the steps (methods) to make the cake.
+A class is a blueprint to create objects. It defines properties (attributes) and actions (methods) that the object can have. A class is 
+like a recipe for a cake. The recipe tells you what ingredients (properties) you need and the steps (methods) to make the cake.
 
 ### Example
 ```java
@@ -73,10 +67,7 @@ public class Car {
 
 ## Properties or attributes
 
-### Concept
-Properties are variables inside a class that store information about the object. Each object has its own values for these properties.
-
-### Analogy
+Properties are variables inside a class that store information about the object. Each object has its own values for these properties. 
 Properties are like the details of a car. For example, the car's color, brand, and maximum speed are its properties.
 
 ### Example
@@ -103,11 +94,8 @@ public class Car {
 
 ## Methods
 
-### Concept
-Methods are actions or behaviors of a class. They are functions inside a class that describe what the object can do.
-
-### Analogy
-If a car is an object, its methods are actions like "start", "stop", or "drive".
+Methods are actions or behaviors of a class. They are functions inside a class that describe what the object can do. If a car is an object, 
+its methods are actions like "start", "stop", or "drive".
 
 ### Example
 ```java
