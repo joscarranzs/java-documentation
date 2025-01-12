@@ -1,145 +1,137 @@
-
 # Operators in Java
 
 ## Arithmetic operators
-Arithmetic operators are used to perform basic mathematical operations:
 
-### Addition (+)
-Adds two numbers.
-Example:
+### Addition (`+`)
+Adds two numbers together.
+
 ```java
-int sum = 5 + 3; // sum is 8
+int result = 5 + 3;
+System.out.println("Addition: " + result); // Output: 8
 ```
 
-### Subtraction (-)
+### Subtraction (`-`)
 Subtracts one number from another.
-Example:
+
 ```java
-int difference = 10 - 4; // difference is 6
+int result = 10 - 4;
+System.out.println("Subtraction: " + result); // Output: 6
 ```
 
-### Multiplication (*)
+### Multiplication (`*`)
 Multiplies two numbers.
-Example:
+
 ```java
-int product = 7 * 3; // product is 21
+int result = 7 * 2;
+System.out.println("Multiplication: " + result); // Output: 14
 ```
 
-### Division (/)
-Divides one number by another.
-Example:
+### Division (`/`)
+Divides one number by another. If both numbers are integers, the result is also an integer (truncated division).
+
 ```java
-int quotient = 20 / 4; // quotient is 5
+int result = 8 / 2;
+System.out.println("Division: " + result); // Output: 4
 ```
 
-### Modulo (%)
-Finds the remainder of the division of two numbers.
-Example:
+### Modulo (`%`)
+Returns the remainder of the division.
+
 ```java
-int remainder = 10 % 3; // remainder is 1
+int result = 10 % 3;
+System.out.println("Modulo: " + result); // Output: 1
 ```
 
 ---
 
 ## Comparison operators
-Comparison operators are used to compare two values and return a boolean result:
 
-### Less than (<)
-Checks if one value is less than another.
-Example:
+### Greater than (`>`)
+Checks if the value on the left is greater than the value on the right.
+
 ```java
-boolean result = 5 < 10; // result is true
+System.out.println(5 > 3); // Output: true
 ```
 
-### Greater than (>)
-Checks if one value is greater than another.
-Example:
+### Less than (`<`)
+Checks if the value on the left is less than the value on the right.
+
 ```java
-boolean result = 15 > 8; // result is true
+System.out.println(4 < 6); // Output: true
 ```
 
-### Equal to (==)
+### Greater than or equal to (`>=`)
+Checks if the value on the left is greater than or equal to the value on the right.
+
+```java
+System.out.println(5 >= 5); // Output: true
+```
+
+### Less than or equal to (`<=`)
+Checks if the value on the left is less than or equal to the value on the right.
+
+```java
+System.out.println(4 <= 7); // Output: true
+```
+
+### Equal to (`==`)
 Checks if two values are equal.
-Example:
+
 ```java
-boolean result = 5 == 5; // result is true
+System.out.println(5 == 5); // Output: true
 ```
 
-### Less than or equal to (<=)
-Checks if one value is less than or equal to another.
-Example:
-```java
-boolean result = 7 <= 7; // result is true
-```
-
-### Greater than or equal to (>=)
-Checks if one value is greater than or equal to another.
-Example:
-```java
-boolean result = 10 >= 8; // result is true
-```
-
-### Not equal to (!=)
+### Not equal to (`!=`)
 Checks if two values are not equal.
-Example:
+
 ```java
-boolean result = 5 != 3; // result is true
+System.out.println(5 != 3); // Output: true
 ```
 
 ---
 
 ## Logical operators
-Logical operators are used to perform logical operations on boolean values:
 
-### OR (||)
-Returns `true` if at least one operand is `true`.
-Example:
+### AND (`&&`)
+Returns `true` if both conditions are `true`.
+
 ```java
-boolean result = true || false; // result is true
+System.out.println(true && false); // Output: false
 ```
 
-### AND (&&)
-Returns `true` only if both operands are `true`.
-Example:
+### OR (`||`)
+Returns `true` if at least one condition is `true`.
+
 ```java
-boolean result = true && false; // result is false
+System.out.println(true || false); // Output: true
 ```
 
-### NOT (!)
-Inverts the boolean value.
-Example:
+### NOT (`!`)
+Reverses the logical state of its operand.
+
 ```java
-boolean result = !true; // result is false
+System.out.println(!true); // Output: false
 ```
 
 ---
 
 ## Ternary operator
-The ternary operator is a shorthand for an `if-else` statement:
 
-### ? :
-Syntax:
+### Conditional (`?:`)
+A shorthand for `if-else`. It takes three operands: a condition, a value if true, and a value if false.
+
 ```java
-condition ? value_if_true : value_if_false;
-```
-Example:
-```java
-int number = 5;
-String result = (number > 3) ? "Greater" : "Lesser"; // result is "Greater"
+int result = (5 > 3) ? 10 : 20;
+System.out.println("Ternary result: " + result); // Output: 10
 ```
 
 ---
 
-## Method reference operator
-The method reference operator `::` is used to refer to methods or constructors in a concise way.
-Example:
-```java
-class Example {
-    public static void printMessage() {
-        System.out.println("Hello, World!");
-    }
-}
+## Operator precedence
 
-Runnable r = Example::printMessage;
-r.run(); // Outputs: Hello, World!
+Defines the order in which operators are evaluated in an expression. Operators with higher precedence are evaluated before those with lower precedence.
+
+```java
+int result = 5 + 3 * 2; // Multiplication (*) has higher precedence than addition (+)
+System.out.println("Result: " + result); // Output: 11
 ```
