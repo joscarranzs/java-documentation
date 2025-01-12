@@ -1,11 +1,11 @@
-### Syntax of Java
+# Syntax of Java
 
-#### Comments
+## Comments
 
-**Concept**
+### Concept
 Comments are used to explain the code or make notes for programmers. They are ignored by the computer when running the program.
 
-**Single-line comments**
+### Single-line comments
 Single-line comments begin with `//`. Anything written after `//` on the same line is a comment.
 
 Example:
@@ -14,7 +14,7 @@ Example:
 System.out.println("Hello World");
 ```
 
-**Multi-line comments**
+### Multi-line comments
 Multi-line comments begin with `/*` and end with `*/`. They can span multiple lines.
 
 Example:
@@ -26,35 +26,35 @@ It can be used to explain more complex logic.
 System.out.println("Hello World");
 ```
 
-**Documentation comments (Javadoc)**
+### Documentation comments (Javadoc)
 Documentation comments are written using `/**` and `*/`. They are used to create documentation for classes, methods, or fields and can be processed by the Javadoc tool.
 
 Example:
 ```java
 /**
-* This class demonstrates how to use comments.
-*/
+ * This class demonstrates how to use comments.
+ */
 public class Example {
-/**
-* Prints a greeting message.
-*/
-public void greet() {
-System.out.println("Hello World");
-}
+    /**
+     * Prints a greeting message.
+     */
+    public void greet() {
+        System.out.println("Hello World");
+    }
 }
 ```
 
 ---
 
-#### Classes
+## Classes
 
-**Concept**
+### Concept
 A class is a blueprint to create objects. It defines properties (attributes) and actions (methods) that the object can have.
 
-**Analogy**
+### Analogy
 A class is like a recipe for a cake. The recipe tells you what ingredients (properties) you need and the steps (methods) to make the cake.
 
-**Example**
+### Example
 ```java
 // This class represents a car
 public class Car {
@@ -71,15 +71,15 @@ public class Car {
 
 ---
 
-#### Properties or attributes
+## Properties or attributes
 
-**Concept**
+### Concept
 Properties are variables inside a class that store information about the object. Each object has its own values for these properties.
 
-**Analogy**
+### Analogy
 Properties are like the details of a car. For example, the car's color, brand, and maximum speed are its properties.
 
-**Example**
+### Example
 ```java
 public class Car {
     // Properties
@@ -101,15 +101,15 @@ public class Car {
 
 ---
 
-#### Methods
+## Methods
 
-**Concept**
+### Concept
 Methods are actions or behaviors of a class. They are functions inside a class that describe what the object can do.
 
-**Analogy**
+### Analogy
 If a car is an object, its methods are actions like "start", "stop", or "drive".
 
-**Example**
+### Example
 ```java
 public class Car {
     // Method
