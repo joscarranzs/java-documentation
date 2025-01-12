@@ -1,86 +1,147 @@
 # Inheritance in Java
 
-## Concept of inheritance
-Inheritance is a mechanism in Java where one class (subclass) can inherit the properties and behaviors of another class (superclass). It allows for code reuse and establishes a hierarchical relationship between classes.
+## Inheritance
+Inheritance is a mechanism in object-oriented programming where one class (the subclass) derives or inherits the properties and behaviors (methods) of another class (the superclass).
+Inheritance is like a child inheriting traits (e.g., eye color, height) from their parents. Similarly, a subclass inherits the attributes and methods of its superclass.
 
 ---
 
 ## Types of inheritance
 
 ### Single inheritance
-A subclass inherits from one superclass.
-Example:
-```java
-class Vehicle {
-    String brand;
+In single inheritance, a class inherits from one superclass.
 
-    public void drive() {
-        System.out.println("Driving...");
-    }
-}
-
-class Car extends Vehicle {
-    int speed;
-}
-```
-
-### Multilevel inheritance
-A class is derived from a class, which is also derived from another class.
-Example:
-```java
-class Vehicle {
-    String brand;
-}
-
-class Car extends Vehicle {
-    int speed;
-}
-
-class SportsCar extends Car {
-    int turboSpeed;
-}
-```
-
-### Hierarchical inheritance
-Multiple subclasses inherit from a single superclass.
-Example:
-```java
-class Vehicle {
-    String brand;
-}
-
-class Car extends Vehicle {
-    int speed;
-}
-
-class Bike extends Vehicle {
-    boolean hasGear;
-}
-```
-
-### Hybrid inheritance
-A combination of two or more types of inheritance. (Not directly supported in Java due to ambiguity issues with multiple inheritance of classes.)
-
----
-
-## Super class
-
-### Concept
-The superclass is the parent class from which other classes (subclasses) inherit. It provides the common properties and methods that can be reused by subclasses.
-
-### Example
 ```java
 class Animal {
-    String name;
-
-    public void eat() {
-        System.out.println(name + " is eating.");
+    void eat() {
+        System.out.println("This animal eats food.");
     }
 }
 
 class Dog extends Animal {
-    public void bark() {
-        System.out.println(name + " is barking.");
+    void bark() {
+        System.out.println("The dog barks.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.eat(); // Inherited from Animal
+        dog.bark();
+    }
+}
+```
+
+### Hierarchical inheritance
+In hierarchical inheritance, multiple classes inherit from a single superclass.
+
+```java
+class Animal {
+    void eat() {
+        System.out.println("This animal eats food.");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("The dog barks.");
+    }
+}
+
+class Cat extends Animal {
+    void meow() {
+        System.out.println("The cat meows.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        Cat cat = new Cat();
+
+        dog.eat(); // Inherited from Animal
+        dog.bark();
+
+        cat.eat(); // Inherited from Animal
+        cat.meow();
+    }
+}
+```
+
+### Multilevel inheritance
+In multilevel inheritance, a class inherits from a class that has already inherited from another class.
+
+```java
+class Animal {
+    void eat() {
+        System.out.println("This animal eats food.");
+    }
+}
+
+class Mammal extends Animal {
+    void walk() {
+        System.out.println("This mammal walks.");
+    }
+}
+
+class Dog extends Mammal {
+    void bark() {
+        System.out.println("The dog barks.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.eat(); // Inherited from Animal
+        dog.walk(); // Inherited from Mammal
+        dog.bark();
+    }
+}
+```
+
+### Multiple inheritance
+Java does not support multiple inheritance with classes to avoid the diamond problem. However, it can be achieved using interfaces.
+
+```java
+interface Animal {
+    void eat();
+}
+
+interface Pet {
+    void play();
+}
+
+class Dog implements Animal, Pet {
+    public void eat() {
+        System.out.println("The dog eats food.");
+    }
+
+    public void play() {
+        System.out.println("The dog plays fetch.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.eat();
+        dog.play();
+    }
+}
+```
+
+---
+
+## Superclass
+A superclass is the parent class from which a subclass inherits.
+A superclass is like a parent in a family tree. It passes its traits (methods and attributes) to its children (subclasses).
+
+```java
+class Animal {
+    void eat() {
+        System.out.println("This animal eats food.");
     }
 }
 ```
@@ -88,65 +149,73 @@ class Dog extends Animal {
 ---
 
 ## Subclass
+A subclass is the child class that inherits from a superclass. It can add its own properties and methods.
+A subclass is like a child who inherits some traits from their parent but also has their own unique characteristics.
 
-### Concept
-A subclass is a child class that inherits properties and methods from a superclass. It can also have additional properties and methods of its own.
-
-### Example
 ```java
-class Animal {
-    String name;
-
-    public void eat() {
-        System.out.println(name + " is eating.");
-    }
-}
-
-class Cat extends Animal {
-    public void meow() {
-        System.out.println(name + " is meowing.");
+class Dog extends Animal {
+    void bark() {
+        System.out.println("The dog barks.");
     }
 }
 ```
 
 ---
 
-## Super keyword
-The `super` keyword is used in Java to refer to the immediate parent class.
+## The `super` keyword
+The `super` keyword is used to refer to the immediate parent class of a subclass. It can be used to:
+1. Call the constructor of the superclass.
+2. Access properties or methods of the superclass.
 
-### Initializing superclass constructor
-Used to call the constructor of the superclass.
-Example:
+The `super` keyword is like a direct line to the parent. It ensures the child class can interact with or call upon the parent's characteristics when needed.
+
+#### Initializing constructor
 ```java
 class Animal {
     String name;
 
-    public Animal(String name) {
+    Animal(String name) {
         this.name = name;
     }
 }
 
 class Dog extends Animal {
-    public Dog(String name) {
-        super(name); // Call to superclass constructor
+    Dog(String name) {
+        super(name); // Call parent class constructor
+    }
+
+    void displayName() {
+        System.out.println("Name: " + name);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog dog = new Dog("Buddy");
+        dog.displayName();
     }
 }
 ```
 
-### Accessing superclass properties and methods
-Used to access parent class’s methods or properties.
-Example:
+#### Accessing properties and methods
 ```java
 class Animal {
-    public void eat() {
-        System.out.println("Animal is eating.");
+    void eat() {
+        System.out.println("This animal eats food.");
     }
 }
 
 class Dog extends Animal {
-    public void eat() {
-        super.eat(); // Call superclass method
-        System.out.println("Dog is eating.");
+    void eat() {
+        super.eat(); // Call parent class method
+        System.out.println("The dog eats kibble.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.eat();
     }
 }
 ```
