@@ -1,47 +1,47 @@
 # Control structures in Java
 
 ## Conditional control structures
-Conditional control structures allow the program to make decisions based on conditions.
 
-### if
-Executes a block of code if the condition is `true`.
-Example:
+### if statement
+The `if` statement is used to execute a block of code if a specified condition is `true`.
+
 ```java
-int number = 5;
-if (number > 3) {
-    System.out.println("Number is greater than 3");
+int number = 10;
+if (number > 5) {
+    System.out.println("The number is greater than 5.");
 }
 ```
 
-### if-else
-Executes one block of code if the condition is `true` and another block if it is `false`.
-Example:
+### if-else statement
+The `if-else` statement allows the execution of one block of code if the condition is `true` and another block if the condition is `false`.
+
+**Example:**
 ```java
-int number = 2;
-if (number > 3) {
-    System.out.println("Number is greater than 3");
+int number = 3;
+if (number > 5) {
+    System.out.println("The number is greater than 5.");
 } else {
-    System.out.println("Number is less than or equal to 3");
+    System.out.println("The number is 5 or less.");
 }
 ```
 
-### else-if
-Used to test multiple conditions.
-Example:
+### else-if statement
+The `else-if` statement is used to test multiple conditions. It executes the block of code for the first condition that evaluates to `true`.
+
 ```java
-int number = 5;
+int number = 8;
 if (number > 10) {
-System.out.println("Number is greater than 10");
+    System.out.println("The number is greater than 10.");
 } else if (number > 5) {
-System.out.println("Number is greater than 5 but less than or equal to 10");
+    System.out.println("The number is greater than 5 but not greater than 10.");
 } else {
-System.out.println("Number is 5 or less");
+    System.out.println("The number is 5 or less.");
 }
 ```
 
-### switch
-Used to execute one block of code among multiple options.
-Example:
+### switch-case statement
+The `switch-case` statement is used to select one of many blocks of code to be executed based on a matching value.
+
 ```java
 int day = 3;
 switch (day) {
@@ -61,46 +61,45 @@ switch (day) {
 
 ---
 
-## Iteration control structures
-Iteration control structures are used to repeat a block of code.
+## Iterative control structures
 
-### for
-Executes a block of code a specific number of times.
-Example:
+### for loop
+The `for` loop is used to execute a block of code a specific number of times.
+
 ```java
-for (int i = 0; i < 5; i++) {
+for (int i = 1; i <= 5; i++) {
     System.out.println("Iteration: " + i);
 }
 ```
 
-### for-each
-Used to iterate over arrays or collections.
-Example:
+### for-each loop
+The `for-each` loop is used to iterate over elements in an array or collection.
+
 ```java
 int[] numbers = {1, 2, 3, 4, 5};
-for (int num : numbers) {
-    System.out.println(num);
+for (int number : numbers) {
+    System.out.println("Number: " + number);
 }
 ```
 
-### while
-Repeats a block of code as long as the condition is `true`.
-Example:
+### while loop
+The `while` loop executes a block of code as long as the specified condition is `true`.
+
 ```java
-int i = 0;
-while (i < 5) {
-    System.out.println("Iteration: " + i);
-    i++;
+int count = 1;
+while (count <= 5) {
+    System.out.println("Count: " + count);
+    count++;
 }
 ```
 
-### do-while
-Executes a block of code at least once, then repeats as long as the condition is `true`.
-Example:
+### do-while loop
+The `do-while` loop executes a block of code at least once, and then repeats the execution as long as the specified condition is `true`.
+
 ```java
-int i = 0;
+int count = 1;
 do {
-    System.out.println("Iteration: " + i);
-    i++;
-} while (i < 5);
+    System.out.println("Count: " + count);
+    count++;
+} while (count <= 5);
 ```
